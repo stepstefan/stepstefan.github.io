@@ -248,15 +248,11 @@ ul.task-list input[type="checkbox"] {
   margin-right: 1rem;
 }
 
+// Define width of profile on large screens (≥576px)
+// Otherwise it is 100%
 @media (min-width: 576px) {
   .profile {
     width: 30%;
-
-    .address {
-      p {
-        display: block;
-      }
-    }
   }
 }
 
