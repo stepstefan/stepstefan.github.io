@@ -195,15 +195,45 @@ ul.task-list input[type="checkbox"] {
 .profile {
   width: 100%;
 
+  // Style for more info
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace;
+    font-size: 1.5rem;
 
     p {
       display: inline-block;
       margin: 0;
     }
+  }
+
+  // Contacts style
+  .contact-icons {
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    // Prevent underline on hover from appearing on icon or whitespace
+    a:hover .social-label {
+      text-decoration: underline;
+    }
+
+    .social-label {
+      margin-left: 1rem;
+    }
+  }
+
+  .social-icon-row {
+    margin-bottom: 5px;
+  }
+
+  .social-icon-row i,
+  .social-icon-row svg,
+  .social-icon-row img {
+    font-size: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    color: var(--global-text-color);
   }
 }
 
@@ -292,12 +322,16 @@ ul.task-list input[type="checkbox"] {
 
     &:hover {
       color: var(--global-hover-color);
+      font-weight: bolder;
     }
+
+    transition: color 0.2s, border-bottom 0.2s, font-size 0.2s;
   }
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;
+    border-bottom: 3px solid var(--global-theme-color); // Extra underline
     color: var(--global-theme-color);
 
     &:hover {
@@ -516,6 +550,10 @@ footer.sticky-bottom {
     .list-group-item {
       background-color: inherit;
       border-color: var(--global-divider-color);
+
+      .title {
+        color: var(--global-theme-color);
+      }
 
       .badge {
         color: var(--global-card-bg-color) !important;
