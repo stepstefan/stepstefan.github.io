@@ -210,30 +210,33 @@ ul.task-list input[type="checkbox"] {
   // Contacts style
   .contact-icons {
     font-size: 1.5rem;
-    text-decoration: none;
 
-    // Prevent underline on hover from appearing on icon or whitespace
-    a:hover .social-label {
-      text-decoration: underline;
+    .social-icon-row {
+      margin-bottom: 5px;
+
+      .social-label {
+        margin-left: 1rem;
+      }
+      
+      a {
+        text-decoration: none;
+
+        i,
+        svg,
+        img {
+          font-size: 1.5rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          vertical-align: middle;
+          color: var(--global-text-color);
+        }
+
+        // Prevent underline on hover from appearing on icon or whitespace
+        &:hover .social-label {
+          text-decoration: underline;
+        }
+      }
     }
-
-    .social-label {
-      margin-left: 1rem;
-    }
-  }
-
-  .social-icon-row {
-    margin-bottom: 5px;
-  }
-
-  .social-icon-row i,
-  .social-icon-row svg,
-  .social-icon-row img {
-    font-size: 1.5rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    vertical-align: middle;
-    color: var(--global-text-color);
   }
 }
 
