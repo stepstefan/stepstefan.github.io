@@ -188,8 +188,8 @@ exclude:
   - readme_preview/
   - vendor
   # Remove blog
-  # - _posts/
-  # - _pages/blog.md
+  - _posts/
+  - _pages/blog.md
   # Remove news
   - _news/
   # Remove projects
