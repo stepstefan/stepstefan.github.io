@@ -24,4 +24,9 @@ social_bottom: false # includes social icons at the bottom of the page
 #   limit: 3 # leave blank to include all the blog posts
 ---
 
-Computer vision research engineer with several years of experience in industrial R&D, specializing in structure-from-motion, neural rendering, and 3D generative modeling. Interested in connecting classical computer vision with deep learning approaches.
+Senior research engineer @ YDrive AI
+
+Research engineer with 5+ years of industry experience, specializing in 3D computer vision and graphics.\\
+Proficient in fields of structure-from-motion, neural rendering and generative 3D modeling.
+
+Interested in figuring out how to scale 3D foundational models to unbouded scenes in procedural and generalizable ways.
