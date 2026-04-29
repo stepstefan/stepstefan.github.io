@@ -1,0 +1,149 @@
+/*
+ * _sass/_custom.scss
+ * Stefan Stepanovic personal website — design system overrides
+ * Imported AFTER al-folio theme files (see assets/css/main.scss).
+ *
+ * Source of truth for visual changes. Never edit al-folio core SCSS.
+ */
+
+// ─────────────────────────────────────────────
+// Green palette overrides
+// Light: forest green replaces al-folio red (#b71c1c)
+// Dark:  light green replaces al-folio cyan (#2698ba)
+// ─────────────────────────────────────────────
+:root {
+  --global-theme-color:      #3a6b35;
+  --global-hover-color:      #2d5a27;
+  --global-hover-text-color: #ffffff;
+  --global-highlight-color:  #3a6b35;
+  --global-code-bg-color:    rgba(58, 107, 53, 0.06);
+}
+
+html[data-theme="dark"] {
+  --global-theme-color:      #6aaa61;
+  --global-hover-color:      #90c489;
+  --global-hover-text-color: #ffffff;
+  --global-highlight-color:  #6aaa61;
+  --global-code-bg-color:    #2c3237;
+}
+
+// ─────────────────────────────────────────────
+// Typography
+// ─────────────────────────────────────────────
+body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.post-title,
+.page-title,
+.cv h1,
+.cv h2 {
+  font-family: "Roboto Slab", Georgia, serif;
+}
+
+code, pre, kbd, samp,
+.highlight,
+.highlight pre,
+.highlighter-rouge .highlight {
+  font-family: "Roboto Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+// ─────────────────────────────────────────────
+// Navbar — active link: 3px brand underline + bolder weight
+// ─────────────────────────────────────────────
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link,
+.navbar .navbar-nav .nav-item.active > .nav-link {
+  border-bottom: 3px solid var(--global-theme-color);
+  font-weight: bolder;
+}
+
+// ─────────────────────────────────────────────
+// Profile image — rectangular with z-depth-1 shadow
+// ─────────────────────────────────────────────
+.profile img {
+  border-radius: 6px !important;
+}
+
+// ─────────────────────────────────────────────
+// Code — green tint (light) / dark grey (dark)
+// ─────────────────────────────────────────────
+code,
+pre {
+  color: var(--global-theme-color);
+  background-color: var(--global-code-bg-color);
+}
+
+// ─────────────────────────────────────────────
+// Cards — white/dark bg, 1px divider border, 6px radius
+// ─────────────────────────────────────────────
+.card,
+.projects .card,
+.repositories .card {
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .projects .card,
+html[data-theme="dark"] .repositories .card {
+  background-color: #212529;
+}
+
+// ─────────────────────────────────────────────
+// CV — title color & list group cards
+// ─────────────────────────────────────────────
+.cv .card {
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.cv .card .list-group-item .title {
+  color: var(--global-theme-color);
+}
+
+// ─────────────────────────────────────────────
+// About page — role tagline (e.g. "Senior research engineer @ YDrive AI")
+// ─────────────────────────────────────────────
+.role-tagline {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--global-theme-color);
+  margin: 0.25rem 0 1.25rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--global-theme-color);
+  line-height: 1.4;
+}
+
+// ─────────────────────────────────────────────
+// Blockquotes — 5px brand left border
+// ─────────────────────────────────────────────
+blockquote {
+  border-left: 5px solid var(--global-theme-color);
+  padding-left: 1rem;
+  color: var(--global-text-color-light);
+  background-color: transparent;
+}
+
+// ─────────────────────────────────────────────
+// Badges — brand bg, white text, 3px radius
+// ─────────────────────────────────────────────
+.badge,
+.badge.badge-primary,
+.post-tags .badge,
+.post-categories .badge {
+  background-color: var(--global-theme-color);
+  color: #ffffff;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.badge:hover {
+  background-color: var(--global-hover-color);
+  color: var(--global-hover-text-color);
+}

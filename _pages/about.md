@@ -25,6 +25,7 @@ social_bottom: false # includes social icons at the bottom of the page
 ---
 
 Senior research engineer @ YDrive AI
+{:.role-tagline}
 
 Research engineer with 5+ years of industry experience, specializing in 3D computer vision and graphics.\\
 Proficient in fields of structure-from-motion, neural rendering and generative 3D modeling.
