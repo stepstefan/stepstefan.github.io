@@ -4,7 +4,7 @@
   },
   "basics": {
     "name": "Stefan Stepanovic",
-    "label": "Computer Vision Research Engineer",
+    "label": "Senior Research Engineer",
     "email": "stefanstepanovic@gmail.com",
     "location": {
       "city": "Belgrade",
@@ -22,45 +22,53 @@
         "url": "https://github.com/stepstefan"
       }
     ],
-    "summary": "Research engineer in computer vision with several years of experience in industrial R&D, working on structure from motion, neural rendering, and 3D generative modeling. Focused on connecting classical geometric vision and deep learning approaches to advance 3D scene understanding and its applications."
+    "summary": "Senior research engineer with 5+ years in industrial R&D, at the intersection of geometry, optimization and learning. Has taken 3D reconstruction systems from research to shipped product, across large-scale structure from motion, neural rendering and Gaussian Splatting. Currently exploring agents that reason over real-world scenes and the generation of large, unbounded ones."
   },
   "work": [
     {
-      "name": "YDrive AI",
-      "position": "Senior Research Engineer in Computer Vision",
+      "name": "Cr3ate.AI (formerly YDrive AI)",
+      "position": "Senior Research Engineer",
       "url": "https://cr3ate.ai",
       "startDate": "2021-11",
       "endDate": "Present",
       "projects": [
         {
-          "name": "Generative AI approaches to 3D",
+          "name": "Structure from motion and 3D reconstruction",
           "highlights": [
-            "Leading YDrive’s efforts in creating systems capable of generating and understanding unbounded 3D scenes.",
-            "In charge of research and development of novel 3D generative models based on Gaussian Splatting."
+            "Designed and maintain the company's proprietary SfM pipeline. It scales from single objects and indoor spaces to multiple city blocks or 12 km of road, and reconstructs 60k images in 3D in under a day on a single consumer-level machine.",
+            "Extended it to a wide range of industrial and commercial cameras and 3D scanners, across driving, handheld, aerial, drone and mixed captures.",
+            "Scaled bundle adjustment with clustering algorithms and GPU-based solvers, which made SfM an order of magnitude faster.",
+            "Made the classical pipeline more robust with deep learning: learned mapping, camera calibration, gravity alignment and depth estimation."
           ]
         },
         {
-          "name": "Structure from motion",
+          "name": "Neural rendering and Gaussian Splatting",
           "highlights": [
-            "Designed and maintained reliable and efficient state-of-the-art SFM solution for large scale reconstructions.",
-            "Delivered advancements in bundle adjustment through GPU efficient implementations and partitioning strategies. Reduced reconstruction time of thousands of images from days to hours.",
-            "Integrated deep learning into classical SFM for faster and more accurate reconstructions. \\Adapted and extended academic works for pose estimation and camera calibration for production grade deployment."
+            "Built the company's real-time neural rendering system from scratch, with photorealistic renders of captured scenes in HD at 30 FPS. Shipped the first MVP to a customer.",
+            "Integrated it into Unreal Engine as a plugin with streaming to mobile devices, and delivered the first public demo of the technology on captures of Seattle.",
+            "Improved Gaussian Splatting rendering of views far from the captured ones, by distilling corrections from generative image and video models. Also researched densification strategies, both published and proprietary."
           ]
         },
         {
-          "name": "Neural rendering",
+          "name": "Scene understanding and spatial intelligence",
           "highlights": [
-            "Developed point cloud-based neural rendering system using neural network as rasterization model, achieving real-time 30FPS HD rendering with high visual fidelity.",
-            "Introduced spatio-temporal training regularization methods for mitigating flickering artifacts.",
-            "Led the productization of a highly optimized solution based on Unreal Engine plugin and WebRTC streaming integration for 5G enabled mobile devices."
+            "Brought semantic understanding to reconstructed 3D scenes and shipped open-vocabulary segmentation as a product feature.",
+            "Working on R&D for the company's spatial intelligence product: AI agents that reason over captured 3D scenes. Prototyped and showcased it on a scan of a residential home under construction."
           ]
         },
         {
-          "name": "Internship management",
+          "name": "Mentorship and hiring",
           "highlights": [
-            "Designed assignments and interviewed two generations of interns.",
-            "Defined research projects aligned with state of the art academic advancements and company road-map.",
-            "Supervised multiple internships with projects spanning from advanced techniques for point cloud rasterization to geometric regularization for Gaussian Splatting."
+            "Designed the assignments and conducted the interviews for four intern hiring rounds.",
+            "Defined and supervised four research internships across neural rendering and Gaussian Splatting. One, a six-month project on generative 3D diffusion models, was run as a research collaboration with international 3D experts."
+          ]
+        },
+        {
+          "name": "Customer and product work",
+          "highlights": [
+            "Made the C++ pipeline releasable as a product, with Python bindings, Docker packaging and internal quality metrics.",
+            "Work directly with customers: support and feature planning for existing ones, tailored demos for prospective ones.",
+            "Co-led the company's exhibition at INTERGEO 2026, the leading geospatial conference: presented the product line to industry attendees and assessed market demand for 3D reconstruction and spatial intelligence."
           ]
         }
       ]
@@ -73,32 +81,45 @@
       "endDate": "2021-11",
       "projects": [
         {
-          "name": "Representation learning on mid-level tasks in computer vision",
+          "name": "Multi-task representation learning",
           "highlights": [
-            "Researched task balancing methods through loss weighting that led to stable training and comparable results across all tasks.",
-            "Designed dropout regularization methods to enforce hierarchy in latent representations through PCA-like properties. This enabled coarse-to-fine control of modalities directly at representation level."
+            "Researched representations shared across many vision tasks, such as depth, surface normals and segmentation, learned by a single network.",
+            "Developed loss-weighting methods that balanced training across tasks, giving stable training and consistent results on every task.",
+            "Designed a dropout-based regularization that orders the learned representation from coarse to fine, similar to PCA, so detail can be controlled directly in the representation."
           ]
         }
       ]
     },
     {
-      "name": "YDrive AI",
+      "name": "Cr3ate.AI (formerly YDrive AI)",
       "position": "Computer Vision Engineering Intern",
       "url": "https://cr3ate.ai",
       "startDate": "2019-09",
       "endDate": "2021-04",
+      "periods": [
+        { "startDate": "2019-09", "endDate": "2019-12" },
+        { "startDate": "2020-07", "endDate": "2021-04" }
+      ],
       "projects": [
         {
-          "name": "Structure From Motion",
+          "name": "Structure from motion",
           "highlights": [
-            "Optimized mapping pipeline for generating high-definition 3D maps reducing quadratic complexity to linear.",
-            "Researched and delivered point-free SFM solution using general 3D curves enabling reconstruction even on texture poor areas."
+            "Optimized the SfM mapping pipeline for long driving captures used in HD mapping for self-driving.",
+            "Researched and delivered point-free SfM based on general 3D curves, which works even in texture-poor areas."
           ]
         }
       ]
     }
   ],
   "education": [
+    {
+      "institution": "University of Belgrade, Faculty of Mathematics",
+      "url": "https://www.matf.bg.ac.rs/",
+      "area": "Theoretical Mathematics",
+      "studyType": "Master of Science",
+      "startDate": "2026",
+      "endDate": "Present"
+    },
     {
       "institution": "University of Belgrade, Faculty of Electrical Engineering",
       "url": "https://www.etf.bg.ac.rs/en",
@@ -114,64 +135,53 @@
     {
       "organization": "PSIML (Practical Seminar in Machine Learning)",
       "url": "https://psiml.pfe.rs/",
-      "position": "Mentor",
+      "position": "Organizer",
       "startDate": "2022",
       "endDate": "Present",
-      "summary": "Mentorship to undergraduate and graduate students providing a strong foundational education in machine learning through lectures and practical work. Examples of practical projects include writing and training NeRF and image diffusion models from scratch."
+      "summary": "A highly selective ten-day machine learning summer school that has trained the region's top university students for over a decade. Also a lecturer and mentor for computer vision projects."
     },
     {
-      "organization": "PFE (Robotics Education Camp)",
+      "organization": "PFE Science and Engineering Center",
       "url": "https://pfe.rs/en/",
-      "position": "Mentor",
+      "position": "Lecturer and Mentor",
       "startDate": "2019",
       "endDate": "Present",
-      "summary": "Lecturer and mentor for motivated high school students in technical fields. The purpose of the camps is education in various fields, from applied physics to machine learning and control systems."
+      "summary": "A non-profit that runs free summer camps for motivated high school students from Serbia and the neighboring region, with hands-on teaching in physics, robotics, computer science and machine learning."
     }
   ],
-    "talks": [
+  "talks": [
     {
-      "name": "Unreal Day - Epic Games",
+      "name": "INTERGEO 2026",
+      "url": "https://www.intergeo.de/en/",
+      "date": "2026-09",
+      "location": "Munich, Germany",
+      "summary": "Co-led the company's exhibition."
+    },
+    {
+      "name": "Unreal Day – Epic Games",
       "url": "https://sga.rs/en/unreal-day-2023/",
       "date": "2023-10",
       "location": "Belgrade, Serbia",
       "title": "Real-time Photorealistic Rendering of Unbounded Scenes",
-      "summary": "Presented YDrive’s neural rendering advancements to 400+ attendees."
-    }
-  ],
-  "projects": [
-    {
-      "name": "Sentence Completion using DSSM",
-      "startDate": "2019-06",
-      "summary": "Repurposed and trained Deep Structured Semantic Models for next word prediction. Done as a project during Practical Seminar in Machine Learning."
-    },
-    {
-      "name": "Automatic Extractive Summarization of Multiple Documents",
-      "startDate": "2018-06",
-      "summary": "Reimplemented text ranking with recursive neural networks approach and its application to extractive summarization."
-    },
-    {
-      "name": "Single Camera Plane Estimation and Tracking",
-      "startDate": "2017-06",
-      "summary": "Structure from motion pipeline from scratch in C++ simplified to planar scenes. Implemented core algorithms and structures for modeling multiple-view geometry."
-    },
-    {
-      "name": "Application for Local Business Management",
-      "startDate": "2018-09",
-      "summary": "Developed a management application specialized for local business (Drvogalant Ltd.) in C# and maintained it since"
+      "summary": "Main-stage talk on large-scale 3D mapping with photorealistic neural rendering, served in real time in Unreal Engine."
     }
   ],
   "skills": [
     {
-      "name": "Programming Languages",
+      "name": "Languages",
       "keywords": ["Python", "C++", "CUDA", "C"]
     },
     {
-      "name": "Industry Knowledge",
-      "keywords": ["Git", "Bash", "CMake", "Linux", "Docker"]
+      "name": "Machine learning",
+      "keywords": ["Deep learning", "Diffusion models", "Agentic systems"]
     },
     {
-      "name": "Toolset",
-      "keywords": ["PyTorch", "Ceres", "Eigen", "TensorFlow", "OpenGL"]
+      "name": "3D vision and optimization",
+      "keywords": ["Structure from motion", "Bundle adjustment", "Neural rendering", "Gaussian Splatting"]
+    },
+    {
+      "name": "Frameworks and tools",
+      "keywords": ["PyTorch", "Ceres", "Eigen", "pybind11", "Docker", "Git", "Linux", "CMake"]
     }
   ],
   "languages": [

@@ -39,7 +39,13 @@
             <a href="{{ content.url }}">{{ content.studyType }}</a>
           </h6>
           <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.institution }}</h6>
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.area | append: ': ' | append: content.score | append: ' GPA' }}</h6>
+          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">
+            {% if content.score and content.score != '' %}
+              {{ content.area | append: ': ' | append: content.score | append: ' GPA' }}
+            {% else %}
+              {{ content.area }}
+            {% endif %}
+          </h6>
           <ul class="items">
             {% for item in content.courses %}
               <li>

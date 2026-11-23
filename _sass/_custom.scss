@@ -12,29 +12,39 @@
 // Dark:  light green replaces al-folio cyan (#2698ba)
 // ─────────────────────────────────────────────
 :root {
-  --global-theme-color:      #3a6b35;
-  --global-hover-color:      #2d5a27;
+  --global-theme-color: #3a6b35;
+  --global-hover-color: #2d5a27;
   --global-hover-text-color: #ffffff;
-  --global-highlight-color:  #3a6b35;
-  --global-code-bg-color:    rgba(58, 107, 53, 0.06);
+  --global-highlight-color: #3a6b35;
+  --global-code-bg-color: rgba(58, 107, 53, 0.06);
 }
 
 html[data-theme="dark"] {
-  --global-theme-color:      #6aaa61;
-  --global-hover-color:      #90c489;
+  --global-theme-color: #6aaa61;
+  --global-hover-color: #90c489;
   --global-hover-text-color: #ffffff;
-  --global-highlight-color:  #6aaa61;
-  --global-code-bg-color:    #2c3237;
+  --global-highlight-color: #6aaa61;
+  --global-code-bg-color: #2c3237;
 }
 
 // ─────────────────────────────────────────────
 // Typography
 // ─────────────────────────────────────────────
 body {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-family:
+    "Roboto",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .post-title,
 .page-title,
 .cv h1,
@@ -42,7 +52,10 @@ h1, h2, h3, h4, h5, h6,
   font-family: "Roboto Slab", Georgia, serif;
 }
 
-code, pre, kbd, samp,
+code,
+pre,
+kbd,
+samp,
 .highlight,
 .highlight pre,
 .highlighter-rouge .highlight {
@@ -146,4 +159,44 @@ blockquote {
 .badge:hover {
   background-color: var(--global-hover-color);
   color: var(--global-hover-text-color);
+}
+
+// ─────────────────────────────────────────────
+// CV — skills as a two-column table (label | items)
+// ─────────────────────────────────────────────
+.cv .skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-weight: 300;
+
+  th {
+    width: 30%;
+    padding: 0.6rem 1rem 0.6rem 0;
+    vertical-align: top;
+    font-weight: 700;
+    color: var(--global-theme-color);
+  }
+
+  td {
+    padding: 0.6rem 0;
+  }
+
+  // Keep each item and its trailing separator together, so a line never starts with "·"
+  .skill {
+    white-space: nowrap;
+  }
+
+  .skill:not(:last-child)::after {
+    content: " ·";
+  }
+
+  tr + tr {
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  @media (max-width: 576px) {
+    th {
+      width: 38%;
+    }
+  }
 }
