@@ -118,6 +118,7 @@ All CV content lives in `assets/json/resume.json` — never hardcode CV content 
 The JSON follows the JSONResume schema. Sections rendered: `basics`, `work`, `education`, `volunteer`, `talks`, `skills`, `languages`.
 
 Work entries use a nested `projects` array (non-standard extension Stefan added) — preserve this structure.
+Work entries may also carry an optional `periods` array (`[{startDate, endDate}]`, another non-standard extension) for split date ranges; `_includes/resume/work.liquid` renders one date badge per period.
 
 ## What NOT to touch
 

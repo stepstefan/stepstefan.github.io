@@ -14,11 +14,26 @@
           {% endif %}
           <table class="table-cv">
             <tbody>
-              <tr>
-                <td>
-                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> {{ date }} </span>
-                </td>
-              </tr>
+              {% if content.periods %}
+                {% assign periods = content.periods | sort: 'startDate' | reverse %}
+                {% for period in periods %}
+                  {% assign periodStart = period.startDate | split: '-' | slice: 0, 2 | join: '.' %}
+                  {% assign periodEnd = period.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
+                  <tr>
+                    <td>
+                      <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
+                        {{ periodStart }} - {{ periodEnd }}
+                      </span>
+                    </td>
+                  </tr>
+                {% endfor %}
+              {% else %}
+                <tr>
+                  <td>
+                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px"> {{ date }} </span>
+                  </td>
+                </tr>
+              {% endif %}
               {% if content.location %}
                 <tr>
                   <td>
@@ -46,7 +61,9 @@
                   {% if project.highlights %}
                     <ul>
                       {% for highlight in project.highlights %}
-                        <li><span class="item">{{ highlight }}</span></li>
+                        <li>
+                          <span class="item">{{ highlight }}</span>
+                        </li>
                       {% endfor %}
                     </ul>
                   {% endif %}
