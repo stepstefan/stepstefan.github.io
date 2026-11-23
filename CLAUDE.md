@@ -30,6 +30,7 @@ npx prettier . --write
 ```
 
 **Prerequisites:**
+
 - Ruby 3.3.5+
 - ImageMagick (for responsive images)
 - Python 3.13+ with nbconvert (for Jupyter notebook support)
@@ -37,6 +38,7 @@ npx prettier . --write
 ## Architecture
 
 ### Core Structure
+
 - **`_config.yml`** - Site-wide settings, plugins, and feature toggles
 - **`_layouts/`** - Liquid templates (about, cv, post, page, bib, distill)
 - **`_includes/`** - Reusable components (header, footer, social, scripts)
@@ -44,12 +46,15 @@ npx prettier . --write
 - **`_data/`** - Structured data files (cv.yml, repositories.yml)
 
 ### Content Collections
+
 - **`_pages/`** - Static pages (about, cv, publications)
 - **`_posts/`** - Blog posts
 - **`_bibliography/`** - BibTeX files for publications (rendered via Jekyll Scholar)
 
 ### CV/Resume
+
 Two data sources supported (auto-selected in `_layouts/cv.liquid`):
+
 - JSON Resume format: `assets/json/resume.json`
 - YAML format: `_data/cv.yml`
 
@@ -89,11 +94,13 @@ When in doubt about colors, typography, spacing or component patterns, refer to 
 ## Visual rules
 
 **Colors**
+
 - Light mode accent: `#3a6b35` (forest green) — replaces al-folio's default red `#b71c1c`
 - Dark mode accent: `#6aaa61` (light green) — replaces al-folio's default cyan `#2698ba`
 - Never introduce new colors outside the token system in `_sass/_custom.scss`
 
 **Typography**
+
 - Headings: Roboto Slab (already loaded via Google Fonts in the theme)
 - Body: Roboto
 - Code: Roboto Mono
@@ -101,12 +108,14 @@ When in doubt about colors, typography, spacing or component patterns, refer to 
 - No emoji anywhere — not in headings, nav, or body copy
 
 **Layout**
+
 - Max width: `1200px` (set in `_config.yml` as `max_width`)
 - Profile photo: left-aligned, rectangular (not circular), `z-depth-1` shadow
 - Navbar: fixed top. Social icons in navbar are ENABLED (`enable_navbar_social: true`) — do not hide `.navbar-brand.social`
 - No gradients, no colored left-border accent cards
 
 **Components**
+
 - Active nav link: `3px solid` brand color bottom border + `font-weight: bolder`
 - Cards: white bg light / `#212529` dark, `1px solid divider` border, `border-radius: 6px`
 - Blockquotes: `border-left: 5px solid brand-color`
@@ -136,4 +145,3 @@ Work entries may also carry an optional `periods` array (`[{startDate, endDate}]
 5. For structural changes: edit the relevant `_layouts/*.liquid` or `_includes/*.liquid`
 6. Open a PR — never push to `main`
 7. Describe what changed and why in the PR description
-
