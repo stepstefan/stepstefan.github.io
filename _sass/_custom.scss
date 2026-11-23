@@ -12,29 +12,39 @@
 // Dark:  light green replaces al-folio cyan (#2698ba)
 // ─────────────────────────────────────────────
 :root {
-  --global-theme-color:      #3a6b35;
-  --global-hover-color:      #2d5a27;
+  --global-theme-color: #3a6b35;
+  --global-hover-color: #2d5a27;
   --global-hover-text-color: #ffffff;
-  --global-highlight-color:  #3a6b35;
-  --global-code-bg-color:    rgba(58, 107, 53, 0.06);
+  --global-highlight-color: #3a6b35;
+  --global-code-bg-color: rgba(58, 107, 53, 0.06);
 }
 
 html[data-theme="dark"] {
-  --global-theme-color:      #6aaa61;
-  --global-hover-color:      #90c489;
+  --global-theme-color: #6aaa61;
+  --global-hover-color: #90c489;
   --global-hover-text-color: #ffffff;
-  --global-highlight-color:  #6aaa61;
-  --global-code-bg-color:    #2c3237;
+  --global-highlight-color: #6aaa61;
+  --global-code-bg-color: #2c3237;
 }
 
 // ─────────────────────────────────────────────
 // Typography
 // ─────────────────────────────────────────────
 body {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-family:
+    "Roboto",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .post-title,
 .page-title,
 .cv h1,
@@ -42,7 +52,10 @@ h1, h2, h3, h4, h5, h6,
   font-family: "Roboto Slab", Georgia, serif;
 }
 
-code, pre, kbd, samp,
+code,
+pre,
+kbd,
+samp,
 .highlight,
 .highlight pre,
 .highlighter-rouge .highlight {
